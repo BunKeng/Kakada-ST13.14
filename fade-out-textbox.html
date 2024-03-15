@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fade-out</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <center>
+        <input type="text" id="txt1"><br>
+        <input type="text" id="txt2"><br>
+        <input type="text" id="txt3"><br>
+        <input type="text" id="txt4"><br>
+        <input type="text" id="txt5"><br>
+        <button id="btnSave">Save</button>
+    </center>
+    <script>
+         $(document).ready(function(){
+            $("#btnSave").click(function(e){
+                $("#txt1").fadeOut(1000, function(){
+                    $("#txt1").fadeIn(1000)
+                });
+                $("#txt2").fadeOut(2000, function(){
+                    $("#txt2").fadeIn(2000)});
+                $("#txt3").fadeOut(3000, function(){
+                    $("#txt3").fadeIn(3000)});
+                $("#txt4").fadeOut(4000, function(){
+                    $("#txt4").fadeIn(4000)});
+                $("#txt5").fadeOut(5000, function(){
+                    $("#txt5").fadeIn(5000)});
+            });
+        });
+    </script>
+</body>
+</html>
