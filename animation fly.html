@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation-fly</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <script src="js/jquery-3.7.0.min.js"></script>
+    <style>
+        .box{
+            background:#98bf21;
+            height:100px;
+            width:100px;
+            position:absolute;
+            border-radius: 0px;
+            
+        }
+        .boxRadius{
+            background:#98bf21;
+            height:100px;
+            width:100px;
+            position:absolute;
+            border-radius: 40px;
+        }
+    </style>
+</head>
+<body>
+   <div style="margin: 10px;">
+      <button id="btnGo">Go</button>
+      <button id="btnBack">Back</button>
+   </div>  
+  <div id="div3" ></div>
+  
+    <script>
+        $(document).ready(function(){
+           $("#div3").addClass("box");
+           $("#btnGo").click(function(){
+              //alert("hi"); 
+               $("#div3").animate({left: '250px'});
+               $("#div3").addClass("boxRadius");
+           });
+           
+           $("#btnBack").click(function(){
+              //alert("hi"); 
+               $("#div3").animate({left: '10px'},2000);
+               $("#div3").fadeOut(600);
+               $("#div3").fadeIn(1000, function(){
+                    $("#div3").removeClass("boxRadius")
+                    $("#div3").css("border","2px solid red");
+                    $("#div3").css("color","#000");
+               });
+           });
+          
+        });
+    </script>
+</body>
+</html>

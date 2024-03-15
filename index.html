@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="style.css" class="stylesheet">
+</head>
+<body>
+    <section class="home-box custom-box hide">
+        <div class="home-box">
+            <h3>Instruction:</h3>
+            <p>Total number of question: <span class="total-question"> </span></p>
+            <button type="button" class="btn" onclick="StartQuiz()" id="btnStartQuiz">Start Quiz</button>
+        </div>
+    </section>
+    <section class="quiz-box custom-box">
+        <div class="question-number">
+        </div>
+        <div class="question-text">
+        </div>
+        <div class="options-container">
+        </div>
+        <div class="next-question-btn">
+            <button type="button" class="btn" onclick="next()">next</button>
+        </div>
+    </section>
+    <section>
+        <div class="result-box custom-box hide">
+        <h1>Quiz Result</h1>
+        <div class="InformationUser">
+            <h3 class="Username">Name : </h3>
+            <h3 class="Group">Group : </h3>
+        </div>
+        <table class="formTable">
+            <tr>
+                <td>ចំនួនសំណួរសរុប</td>
+                <td><span class="total-question"></span></td>
+            </tr>
+            <tr>
+                <td>ចំនួនដែលបានឆ្លើយ</td>
+                <td><span class="total-attempt"></span></td>
+            </tr>
+            <tr>
+                <td>ឆ្លើយត្រូវ</td>
+                <td><span class="total-correct"></span></td>
+            </tr>
+            <tr>
+                <td>ឆ្លើយខុស</td>
+                <td><span class="total-wrong"></span></td>
+            </tr>
+            <tr>
+                <td>ភាគរយ</td>
+                <td><span class="total-Percentage"></span></td>
+            </tr>
+            <tr>
+                <td>Grade</td>
+                <td><span class="total-Grade" id="Grade"></span></td>
+            </tr>
+            <tr>
+                <td>ពិន្ទុសរុប</td>
+                <td><span class="total-Score"></span></td>
+            </tr>
+        </table>
+        <button type="button" class="btn" onclick="tryAgainQuiz()">Try Again</button>
+        <button type="button" class="btn" onclick="gotohome()">Go To home</button>
+        </div>
+    </section>
+    <script src="question.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
